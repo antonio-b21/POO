@@ -9,14 +9,14 @@ class Sistem {
 	int col = 0;
 	int lin = 0;
 	Fractie detPrin;
-	Fractie CalculeazaDet(int col);
+	Fractie CalculeazaDet(int);
 	void DeterminaRang();
-	void Incompatibil();
 	void Determinat();
+	void Incompatibil();
 	void Nedeterminat();
 public:
-	friend istream& operator >> (istream& os, Sistem& sis);
-	friend ostream& operator << (ostream& os, const Sistem& sis);
+	friend istream& operator>> (istream&, Sistem&);
+	friend ostream& operator<< (ostream&, const Sistem&);
 	void Rezolva();
 };
 
