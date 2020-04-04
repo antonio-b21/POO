@@ -9,7 +9,7 @@ public:
 	Vector();
 	Vector(int);
 	Vector(const Vector&);
-	~Vector();
+	virtual ~Vector();
 	Vector& operator=(const Vector&);
 	virtual void push(const Complex&) = 0;
 	virtual Complex pop() = 0;
