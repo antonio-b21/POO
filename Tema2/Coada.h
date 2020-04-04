@@ -10,7 +10,6 @@ public:
 	Coada& operator=(const Coada&);
 	void push(const Complex&);
 	Complex pop();
-	bool eImaginara() const;
 	friend ostream& operator<<(ostream&, const Coada&);
 };
 

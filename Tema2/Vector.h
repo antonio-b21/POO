@@ -11,8 +11,9 @@ public:
 	Vector(const Vector&);
 	~Vector();
 	Vector& operator=(const Vector&);
-	virtual void push(const Complex&, int);
-	virtual Complex pop(int);
+	virtual void push(const Complex&) = 0;
+	virtual Complex pop() = 0;
+	bool eImaginar() const;
 	friend ostream& operator<<(ostream&, const Vector&);
 	friend istream& operator>>(istream&, Vector&);
 };

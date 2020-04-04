@@ -46,34 +46,13 @@ Vector& Vector::operator=(const Vector& vec) {
 	return *this;
 }
 
-void Vector::push(const Complex& nr, int index) {
-	Vector aux(*this);
-	delete[] v;
-	try {
-		v = new Complex[++dim];
-	} catch (bad_array_new_length) {
-		terminate();
+bool Vector::eImaginar() const {
+	for (int i = 0; i < dim; i++) {
+		if (v[i].eImaginar() == false) {
+			return false;
+		}
 	}
-	for (int i = 0; i < index; i++) {
-		v[i] = aux.v[i];
-	}
-	v[index] = nr;
-	for (int i = index + 1; i < dim; i++) {
-		v[i] = aux.v[i - 1];
-	}
-}
-
-Complex Vector::pop(int index) {
-	Vector aux(*this);
-	delete[] v;
-	v = new Complex[dim - 1];
-	for (int i = 0; i < index; i++) {
-		v[i] = aux.v[i];
-	}
-	for (int i = index + 1; i < dim; i++) {
-		v[i - 1] = aux.v[i];
-	}
-	return aux.v[index];
+	return true;
 }
 
 ostream& operator<<(ostream& os, const Vector& vec) {

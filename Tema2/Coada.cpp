@@ -39,16 +39,14 @@ Complex Coada::pop() {
 	return aux.v[0];
 }
 
-bool Coada::eImaginara() const {
-	for (int i = 0; i < dim; i++) {
-		if (v[i].eImaginar() == false) {
-			return false;
-		}
-	}
-	return true;
-}
-
 ostream& operator<<(ostream& os, const Coada& coa) {
-	os << "Coada:" << static_cast<Vector>(coa);
+	os << "Coada:[";
+	for (int i = 0; i < coa.dim - 1; i++) {
+		os << coa.v[i] << ", ";
+	}
+	if (coa.dim > 0) {
+		os << coa.v[coa.dim - 1];
+	}
+	os << "]";
 	return os;
 }

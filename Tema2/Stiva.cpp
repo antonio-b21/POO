@@ -39,16 +39,14 @@ Complex Stiva::pop() {
 	return aux.v[dim];
 }
 
-bool Stiva::eImaginara() const {
-	for (int i = 0; i < dim; i++) {
-		if (v[i].eImaginar() == false) {
-			return false;
-		}
-	}
-	return true;
-}
-
 ostream& operator<<(ostream& os, const Stiva& sti) {
-	os << "Stiva:" << static_cast<Vector>(sti);
+	os << "Stiva:[";
+	for (int i = 0; i < sti.dim - 1; i++) {
+		os << sti.v[i] << ", ";
+	}
+	if (sti.dim > 0) {
+		os << sti.v[sti.dim - 1];
+	}
+	os << "]";
 	return os;
 }
