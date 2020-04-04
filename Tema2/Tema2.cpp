@@ -26,7 +26,7 @@ int main()
     //    cout << complexe[i] << " ";
     //}
 
-    ////  n obiecte Vector
+    ////  n obiecte Vector nu mai functioneaza pt ca Vector e clasa abstracta
     //cin >> n;
     //Vector* vectori = new Vector[n];
     //for (int i = 0; i < n; i++) {
