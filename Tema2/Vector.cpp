@@ -8,7 +8,8 @@ Vector::Vector(int dim) :dim(dim) {
 	try{
 		v = new Complex[dim];
 	} catch (bad_array_new_length) {
-		terminate();
+		cerr << "Memorie insuficienta";
+		exit(1);
 	}
 }
 
@@ -16,7 +17,8 @@ Vector::Vector(const Vector& vec): dim(vec.dim) {
 	try {
 		v = new Complex[dim];
 	} catch (bad_array_new_length) {
-		terminate();
+		cerr << "Memorie insuficienta";
+		exit(1);
 	}
 	for (int i = 0; i < dim; i++) {
 		v[i] = vec.v[i];
@@ -36,7 +38,8 @@ Vector& Vector::operator=(const Vector& vec) {
 			try {
 				v = new Complex[dim];
 			} catch (bad_array_new_length) {
-				terminate();
+				cerr << "Memorie insuficienta";
+				exit(1);
 			}
 			for (int i = 0; i < dim; i++) {
 				v[i] = vec.v[i];
@@ -87,7 +90,8 @@ istream& operator>>(istream& is, Vector& vec) {
 	} catch (int) {
 		cin >> vec;
 	} catch (bad_array_new_length) {
-		terminate();
+		cerr << "Memorie insuficienta";
+		exit(1);
 	}
 	for (int i = 0; i < vec.dim; i++) {
 		try {

@@ -21,7 +21,8 @@ void Stiva::push(const Complex& nr) {
 	try {
 		v = new Complex[dim + 1];
 	} catch (bad_array_new_length) {
-		terminate();
+		cerr << "Memorie insuficienta";
+		exit(1);
 	}
 	for (int i = 0; i < dim; i++) {
 		v[i] = aux.v[i];
@@ -32,7 +33,12 @@ void Stiva::push(const Complex& nr) {
 Complex Stiva::pop() {
 	Stiva aux(*this);
 	delete[] v;
-	v = new Complex[--dim];
+	try {
+		v = new Complex[--dim];
+	} catch (bad_array_new_length) {
+		cerr << "Stiva este goala. underflow";
+		exit(1);
+	}
 	for (int i = 0; i < dim; i++) {
 		v[i] = aux.v[i];
 	}

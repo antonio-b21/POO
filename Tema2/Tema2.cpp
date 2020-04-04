@@ -6,14 +6,8 @@
 
 using namespace std;
 
-void myterminate() {
-    cerr << "Memorie insuficienta";
-    exit(1);
-}
-
 int main()
 {
-    set_terminate(myterminate);
     int n;
 
     ////  n obiecte Complex
