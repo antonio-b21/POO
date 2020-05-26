@@ -1,0 +1,20 @@
+masti - chirurgicale/policarbonat
+dezinfectanti - bacterii/fungi/virusuri/universal
+
+masca - protectie (int)
+masca chirurgicala - culoare (string)
+		   - nrPliuri (int)
+masca policarbonat - tipPrindere (string)
+
+dezinfectant	- abstract
+		- ingrediente (vector<string>)
+		- tipuriSuprafata (vector<String>)
+		- eficienta (double)
+dezinfectantA	- nrSpecii (int)
+		- nrSpeciiExistente (static int)
+
+achizitie - numeClient (string)
+	  - data (int int int)
+	  - dezinfectanti (vector<Dezinfectant*>)
+	  - masti (vector<Masca*>)
+	  - preturi (static vector<int>)

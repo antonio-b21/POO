@@ -1,0 +1,20 @@
+companie - denumire (string) 
+	 - sediu (string)
+	 - an infiintare (int)
+	 - cod ICAO/IATA (string)
+	 - destinatii (vector<string>)
+	 - zboruri (vector<zbor>)
+lowcost - pret bagaj/kg (double)
+	- greutate bagaj (double)
+delinie - escale (vector<string>)
+charter - operator (string)
+	- difPret (double)
+
+zbor	- contor (static int)
+	- orasDest (string)
+	- data (int int int)
+	- ora (int int)
+	- durata (double)
+	- pret (double)
+	- dc de linie - escale
+	- dc low cost - greutate bagaj si pret/kg
