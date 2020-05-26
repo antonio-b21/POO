@@ -1,2 +1,1 @@
-# POO-Lab
- Probleme de la laboratorul de POO
+#Materiale de la Programare Orientata pe Obiecte
